@@ -15,6 +15,6 @@ function verificarSenha(senha) {
   }
   
   
-  let senha = prompt("Digite sua senha: ");
+  let senha = prompt("Digite uma senha: ");
   console.log(verificarSenha(senha));
   
