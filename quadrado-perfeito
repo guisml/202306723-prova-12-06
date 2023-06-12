@@ -1,0 +1,10 @@
+function isQuadradoPerfeito(numero) {
+  let raiz = Math.sqrt(numero);
+  return raiz === Math.floor(raiz);
+}
+let numero =  prompt("Digite um número :");
+if (isQuadradoPerfeito(numero)) {
+  console.log(`${numero} é um quadrado perfeito.`);
+} else {
+  console.log(`${numero} não é um quadrado perfeito.`);
+}
