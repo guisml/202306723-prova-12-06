@@ -1,12 +1,12 @@
-function primeNumbers(num) {
-  let numbers = new Array();
-  for (var i = 0; i <= num; i++) {
-    if (isPrime(i)){
-      numbers.push(i);
+function primeNumber (num){
+    var num = 0;
+    for (var i = 0; i <= num; i++){
+        if ((num % 1 === 0) && (num % num === 0)){
+            return (primeNumber(i));
+        }
     }
-  }
-  return numbers;
 }
+
 function isPrime(num) {
   for(let i = 2; i <num; i++)
     if(num % i === 0) {
@@ -14,4 +14,12 @@ function isPrime(num) {
     };
   return num > 1;
 }
-console.log(primeNumbers(1000));
+
+let num = prompt("Digite");
+if (isPrime(num)){
+    console.log(`${num} é primo.`);
+} else {
+    console.log(`${num} não é primo.`);
+}
+
+console.log(`Esses são todos os números primos até 1000: ${primeNumbers(1000)}`);
