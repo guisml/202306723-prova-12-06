@@ -1,17 +1,20 @@
-function primeNumbers(num) {
-    let numbers = new Array();
-    for (var i = 0; i <= num; i++) {
-      if (isPrime(i)){
-        numbers.push(i);
-      }
+function verificarSenha(senha) {
+    if (senha.length < 8) {
+      return "A senha deve ter pelo menos 8 caracteres.";
     }
-    return numbers;
+    if (!/[a-z]/.test(senha)) {
+      return "A senha deve conter pelo menos uma letra minúscula.";
+    }
+    if (!/[A-Z]/.test(senha)) {
+      return "A senha deve conter pelo menos uma letra maiúscula.";
+    }
+    if (!/\d/.test(senha)) {
+      return "A senha deve conter pelo menos um número.";
+    }
+    return "A senha é válida.";
   }
-  function isPrime(num) {
-    for(let i = 2; i <num; i++)
-      if(num % i === 0) {
-          return false
-      };
-    return num > 1;
-  }
-  console.log(primeNumbers(1000));
+  
+  
+  let senha = prompt("Digite sua senha: ");
+  console.log(verificarSenha(senha));
+  
